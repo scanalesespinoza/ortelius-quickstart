@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: ortelius
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - ortelius-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /dmadminweb
+    route:
+    - destination:
+        host: ortelius-app-ortelius-chart
+        port:
+          number: 80

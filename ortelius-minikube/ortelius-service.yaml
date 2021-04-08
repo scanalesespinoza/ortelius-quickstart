@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "ortelius-service"
+spec:
+  selector:
+    app: ortelius
+  ports:
+  - name: ortelius
+    nodePort: 30901
+    protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: NodePort

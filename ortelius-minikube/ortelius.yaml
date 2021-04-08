@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ortelius
+  namespace: ortelius
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ortelius
+  template:
+    metadata:
+      labels:
+        app: ortelius
+    spec:
+      containers:
+      - name: ortelius
+        image: quay.io/ortelius/ortelius:latest
+        ports:
+        - containerPort: 8080
