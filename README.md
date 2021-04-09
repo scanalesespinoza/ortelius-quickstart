@@ -16,7 +16,7 @@ minikube version: v1.4.0
 
 # Folders description
 
-- istio-ortelius: Contains all the yamls needed for istio routing to ortelius console.
 - scripts: Support script with istio installation.
 - ortelius-minikube: Contains the basic yamls to get running ortelius in kubernetes/minikube.
-- ortelius-minikube: Contains a basic helm chart to deploy ortelius in kubernetes/minikube.
+- ortelius-minikube-chart: Contains a basic helm chart to deploy ortelius in kubernetes/minikube.
+- ortelius-istio: Contains all the yamls needed for istio routing to ortelius console.
