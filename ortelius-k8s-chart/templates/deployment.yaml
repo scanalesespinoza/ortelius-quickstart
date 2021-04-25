@@ -19,6 +19,7 @@ spec:
       {{- end }}
       labels:
         {{- include "ortelius-chart.selectorLabels" . | nindent 8 }}
+        app: ortelius 
     spec:
       hostname: ortelius
       {{- with .Values.imagePullSecrets }}
